@@ -1,0 +1,56 @@
+/* about + stack */
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 1.5rem clamp(1.5rem, 4vw, 4.5rem);
+  align-items: end;
+}
+.about p {
+  color: var(--soft);
+  font-size: 1.0625rem;
+  max-width: 34em;
+}
+#stackg {
+  width: 100%;
+  height: clamp(440px, 60vw, 640px);
+  display: block;
+  touch-action: pan-y;
+  margin-top: 1rem;
+}
+#stackg line {
+  stroke: var(--line);
+  stroke-width: 1;
+  transition: stroke 0.2s;
+}
+#stackg circle {
+  fill: var(--ink);
+  cursor: grab;
+  transition: opacity 0.2s;
+}
+#stackg text {
+  font-family: var(--sans);
+  fill: var(--soft);
+  font-size: 11px;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+#stackg .hub text {
+  fill: var(--ink);
+  font-size: 13px;
+  font-weight: 560;
+}
+#stackg .me circle {
+  fill: var(--mark);
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+#stackg .dim {
+  opacity: 0.15;
+}
+#stackg line.hot {
+  stroke: var(--ink);
+}
+.stack-list {
+  display: none;
+  margin-top: 1.5rem;
+}

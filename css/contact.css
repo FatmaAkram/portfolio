@@ -1,0 +1,70 @@
+/* contact */
+.contact {
+  padding-bottom: 3rem;
+}
+.composer {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-end;
+  background: var(--raise);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 0.7rem 0.7rem 0.7rem 1.2rem;
+  max-width: 44rem;
+  margin-top: 2rem;
+  box-shadow: var(--shadow);
+}
+.composer:focus-within {
+  border-color: var(--ink);
+}
+.composer textarea {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: none;
+  resize: none;
+  font: inherit;
+  font-size: 1.0625rem;
+  color: var(--ink);
+  padding: 0.55rem 0;
+  outline: none;
+  field-sizing: content;
+  min-height: 2.5em;
+  max-height: 9em;
+}
+.composer textarea::placeholder {
+  color: var(--faint);
+}
+.ends {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 2.2rem;
+  margin-top: clamp(3rem, 7vw, 5rem);
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
+  color: var(--soft);
+  font-size: 0.9375rem;
+}
+.ends a {
+  color: var(--ink);
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+}
+.ends span:last-child {
+  margin-left: auto;
+}
+
+.cur {
+  position: fixed;
+  z-index: 90;
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0 -6px;
+  border-radius: 50%;
+  background: var(--mark);
+  border: 1px solid #151515;
+  pointer-events: none;
+  opacity: 0;
+}

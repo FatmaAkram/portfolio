@@ -1,0 +1,102 @@
+@media (hover: hover) and (pointer: fine) {
+  .cur.live {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 920px) {
+  .hgrid {
+    padding-top: 3.5rem;
+  }
+
+  .proj,
+  .about {
+    grid-template-columns: 1fr;
+  }
+  .txt {
+    position: static;
+  }
+}
+@media (max-width: 600px) {
+  .stage {
+    grid-template-columns: 1fr;
+  }
+  .trace {
+    grid-template-columns: 1fr;
+  }
+  .facts div {
+    grid-template-columns: 1fr;
+  }
+  .doc {
+    font-size: 1.125rem;
+  }
+  .ans {
+    font-size: 1.0625rem;
+  }
+  .lab {
+    font-size: 0.75rem;
+  }
+  .tab a {
+    padding: 0.45rem 0.6rem;
+    font-size: 0.8125rem;
+    gap: 0.3rem;
+  }
+  .tab a svg {
+    width: 14px;
+    height: 14px;
+  }
+  .theme {
+    display: none;
+  }
+  .note {
+    left: auto;
+    right: calc(100% - 1.4em);
+    bottom: calc(100% + 1.5em);
+    transform: rotate(-5deg);
+    transform-origin: 100% 100%;
+  }
+  .note svg {
+    right: auto;
+    left: calc(100% - 1.1em);
+    transform: scaleX(-1);
+  }
+  .composer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .composer .btn {
+    justify-content: center;
+  }
+  #stackg {
+    display: none;
+  }
+  .stack-list {
+    display: grid;
+    gap: 1rem;
+  }
+  .stack-list b {
+    display: block;
+    font-weight: 560;
+  }
+  .stack-list span {
+    color: var(--soft);
+  }
+  .ends span:last-child {
+    margin-left: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .mk,
+  .srcc,
+  .bub,
+  .tab i {
+    transition: none;
+  }
+  .caret,
+  .cue i {
+    animation: none;
+  }
+}

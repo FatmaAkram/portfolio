@@ -1,0 +1,227 @@
+/* hero */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+#drift {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.hgrid {
+  min-height: calc(100svh - 68px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: clamp(4rem, 12vh, 8rem);
+}
+.hello {
+  font-size: clamp(2.7rem, 7.4vw, 6.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  font-weight: 600;
+}
+.hello .hey {
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+.nm {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  isolation: isolate;
+}
+.swash {
+  position: absolute;
+  left: -4%;
+  bottom: 4%;
+  width: 104%;
+  height: 52%;
+  z-index: -1;
+  overflow: visible;
+}
+.swash path {
+  fill: none;
+  stroke: var(--swash);
+  stroke-width: 34;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+}
+.note {
+  position: absolute;
+  left: calc(100% + 0.35em);
+  bottom: calc(100% + 0.9em);
+  font-family: "Caveat", "Bradley Hand", "Segoe Script", cursive;
+  font-size: max(1.35rem, 0.33em);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1;
+  color: var(--ink);
+  white-space: nowrap;
+  transform: rotate(-7deg);
+  transform-origin: 0 100%;
+}
+.note svg {
+  position: absolute;
+  right: calc(100% - 1.1em);
+  top: 95%;
+  width: 2.3em;
+  height: auto;
+  overflow: visible;
+}
+.note path {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+}
+.intro {
+  max-width: 36em;
+  margin-top: clamp(1.4rem, 3vw, 2.2rem);
+  font-size: clamp(1.0625rem, 1.55vw, 1.3rem);
+  line-height: 1.5;
+  color: var(--soft);
+  text-wrap: pretty;
+}
+.hero .btns {
+  margin-top: clamp(1.8rem, 3.5vw, 2.6rem);
+  justify-content: center;
+}
+.cur {
+  display: none !important;
+}
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.sec-head.map {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: center;
+}
+.gw {
+  padding: 0 !important;
+  align-items: center;
+  justify-content: center;
+}
+.gw .orb {
+  width: min(100%, 460px);
+}
+.now {
+  margin-top: 0.8rem;
+  min-height: 1.9em;
+  font-size: 1.0625rem;
+}
+.now span {
+  background: var(--mark);
+  color: var(--on-mark);
+  padding: 0.15em 0.45em;
+  border-radius: 4px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.now span::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--on-mark);
+  margin-left: 3px;
+  vertical-align: -0.14em;
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.btns {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  flex: none;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 560;
+  font-size: 0.9375rem;
+  padding: 0.72rem 1.3rem;
+  border-radius: 99px;
+  border: 1px solid var(--line);
+  background: var(--raise);
+}
+.btn.dark {
+  background: var(--pill);
+  color: var(--on-pill);
+  border-color: var(--pill);
+}
+.orb {
+  position: relative;
+  aspect-ratio: 1;
+  width: clamp(300px, min(64vh, 40vw), 560px);
+  pointer-events: auto;
+  cursor: grab;
+  touch-action: pan-y;
+}
+.orb:active {
+  cursor: grabbing;
+}
+.orb canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.lab {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  font-size: 0.8125rem;
+  font-weight: 560;
+  white-space: nowrap;
+  padding: 0.3rem 0.7rem 0.3rem 0.45rem;
+  border-radius: 99px;
+  background: var(--raise);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  will-change: transform, opacity;
+  transition: border-color 0.2s;
+}
+.lab::before {
+  content: "";
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 50%;
+  background: var(--mark);
+  border: 1px solid #151515;
+}
+.lab:hover {
+  border-color: var(--ink);
+  z-index: 3 !important;
+  opacity: 1 !important;
+}
+.hint {
+  color: var(--faint);
+  font-size: 0.8125rem;
+  border-top: 1px solid var(--line);
+  padding-top: 0.7rem;
+}
