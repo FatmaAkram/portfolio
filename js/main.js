@@ -17,7 +17,7 @@ import initOps from "./demos/ops.js";
 import initStackGraph from "./features/stack-graph.js";
 import initScrollMotion from "./features/scroll-motion.js";
 import initMagnetic from "./features/magnetic.js";
-import initComposer from "./features/composer.js";
+import initCopyEmail from "./features/copy-email.js";
 
 safe("theme", initTheme);
 safe("tab", initTabBar);
@@ -32,4 +32,4 @@ safe("ops", initOps);
 safe("stack", initStackGraph);
 safe("scroll", initScrollMotion);
 safe("mag", initMagnetic);
-safe("mail", initComposer);
+safe("copy", initCopyEmail);
